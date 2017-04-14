@@ -17,6 +17,7 @@ classnames = require 'classnames'
 
 `import ShortcutEditor from '../../classifier/tasks/shortcut-editor';`
 `import FeedbackEditor from './feedback/feedback-editor';`
+`import MobileSection from '../../classifier/tasks/mobile-section';`
 
 DEMO_SUBJECT_SET_ID = if process.env.NODE_ENV is 'production'
   '6' # Cats
@@ -468,6 +469,7 @@ EditWorkflowPage = React.createClass
                 />}
               <hr />
               <br />
+
               {if 'general feedback' in @props.project.experimental_tools
                 <FeedbackEditor
                   task={@props.workflow.tasks[@state.selectedTaskKey]}
@@ -475,6 +477,14 @@ EditWorkflowPage = React.createClass
                 />}
               <hr />
               <br />
+
+              {if @props.workflow.tasks[@state.selectedTaskKey].type in ['single', 'multiple']
+                <MobileSection
+                  project={@props.project}
+                  workflow={@props.workflow}
+                  task={@props.workflow.tasks[@state.selectedTaskKey]}
+                />}
+
               <AutoSave resource={@props.workflow}>
                 <small>
                   <button type="button" className="minor-button" onClick={@handleTaskDelete.bind this, @state.selectedTaskKey}>Delete this task</button>
