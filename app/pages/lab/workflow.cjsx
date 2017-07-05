@@ -17,7 +17,7 @@ classnames = require 'classnames'
 
 `import ShortcutEditor from '../../classifier/tasks/shortcut-editor';`
 `import FeedbackEditor from './feedback/feedback-editor';`
-`import MobileSection from './mobile-section';`
+`import MobileSection from './mobile';`
 
 DEMO_SUBJECT_SET_ID = if process.env.NODE_ENV is 'production'
   '6' # Cats
