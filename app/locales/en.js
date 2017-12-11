@@ -46,7 +46,6 @@ export default {
     loading: 'Loading organization',
     error: 'There was an error retrieving organization',
     notFound: 'organization not found.',
-    notPermission: 'If you\'re sure the URL is correct, you might not have permission to view this organization.',
     pleaseWait: 'Please wait...',
     home: {
       projects: {

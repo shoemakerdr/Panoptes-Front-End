@@ -82,11 +82,19 @@ class OrganizationContainer extends React.Component {
 
   fetchProjects(organization, collaboratorView, locationQuery = this.props.location.query) {
     this.setState({ errorFetchingProjects: null, fetchingProjects: true, fetchingProjectAvatars: true });
-    const query = { launch_approved: true, include: 'avatar' };
+    const query = { include: 'avatar' };
+
+    if (organization.listed) {
+      query.launch_approved = true;
+    } else {
+      query.beta_approved = true;
+    }
 
     if (collaboratorView) {
       delete query.launch_approved;
+      delete query.beta_approved;
     }
+
     if (locationQuery && locationQuery.category) {
       query.tags = locationQuery.category;
     }
@@ -174,7 +182,7 @@ class OrganizationContainer extends React.Component {
   }
 
   render() {
-    if (this.state.organization && (this.state.organization.listed || isAdmin() || this.isCollaborator())) {
+    if (this.state.organization) {
       return (
         <OrganizationPage
           category={this.props.location && this.props.location.query && this.props.location.query.category}
@@ -210,15 +218,12 @@ class OrganizationContainer extends React.Component {
             <code>{this.state.error.toString()}</code>
           </p>
         </div>);
-    } else if (this.state.organization === undefined || (this.state.organization && !this.state.organization.listed)) {
+    } else if (this.state.organization === undefined) {
       return (
         <div className="content-container">
           <p>
             <strong>{this.props.params.name} </strong>
             <Translate content="organization.notFound" with={{ title: this.props.params.name }} />
-          </p>
-          <p>
-            <Translate content="organization.notPermission" />
           </p>
         </div>);
     } else {
