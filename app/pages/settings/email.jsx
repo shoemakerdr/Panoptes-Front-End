@@ -67,6 +67,7 @@ function ProjectPreferences({ projects, projectPreferences, onChange }) {
             <tr key={projectPreference.id}>
               <td>
                 <input
+                  id={projectPreference.id}
                   type="checkbox"
                   name="email_communication"
                   checked={projectPreference.email_communication}
@@ -74,7 +75,9 @@ function ProjectPreferences({ projects, projectPreferences, onChange }) {
                 />
               </td>
               <td>
-                {projects[i].display_name}
+                <label htmlFor={projectPreference.id}>
+                  {projects[i].display_name}
+                </label>
               </td>
             </tr>
           );
@@ -305,6 +308,7 @@ class EmailSettingsPage extends React.Component {
               onChange={handleInputChange.bind(this.props.user)}
             />{' '}
             <Translate content="emailSettings.general.classify" />
+            <Translate component="p" content="emailSettings.general.note" />
             <Translate component="p" content="emailSettings.general.manual" />
           </label>
         </AutoSave>
