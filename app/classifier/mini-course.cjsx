@@ -1,7 +1,7 @@
 React = require 'react'
 Dialog = require 'modal-form/dialog'
 Translate = require 'react-translate-component'
-MediaCard = require '../components/media-card'
+`import MediaCard from '../components/media-card'`;
 {Markdown} = require 'markdownz'
 apiClient = require 'panoptes-client/lib/api-client'
 Translations = require('./translations').default
@@ -39,7 +39,7 @@ module.exports = React.createClass
               mediaByID
 
         awaitMiniCourseMedia.then (mediaByID) =>
-          minicourseContent = 
+          minicourseContent =
             <Translations original={minicourse} type="minicourse" store={store}>
               <MiniCourseComponent projectPreferences={projectPreferences} user={user} minicourse={minicourse} media={mediaByID} geordi={geordi} />
             </Translations>

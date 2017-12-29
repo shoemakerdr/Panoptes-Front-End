@@ -1,7 +1,7 @@
 React = require 'react'
 Dialog = require 'modal-form/dialog'
 Translate = require 'react-translate-component'
-MediaCard = require '../components/media-card'
+`import MediaCard from '../components/media-card'`;
 {Markdown} = require 'markdownz'
 apiClient = require 'panoptes-client/lib/api-client'
 
@@ -56,7 +56,7 @@ module.exports = React.createClass
             mediaByID
 
         awaitTutorialMedia.then (mediaByID) =>
-          tutorialContent = 
+          tutorialContent =
             <Translations original={tutorial} type="tutorial" store={store}>
               <TutorialComponent tutorial={tutorial} media={mediaByID} preferences={preferences} user={user} geordi={geordi} />
             </Translations>
