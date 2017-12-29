@@ -5,7 +5,7 @@ CommentBox = require './comment-box'
 commentValidations = require './lib/comment-validations'
 discussionValidations = require './lib/discussion-validations'
 talkClient = require 'panoptes-client/lib/talk-client'
-Loading = require '../components/loading-indicator'
+`import Loading from '../components/loading-indicator'`;
 projectSection = require '../talk/lib/project-section'
 
 module.exports = React.createClass
@@ -20,10 +20,10 @@ module.exports = React.createClass
     discussionValidationErrors: []
     loading: false
     boards: []
-  
+
   componentDidMount: ->
     @updateBoards @props.subject
-  
+
   componentWillReceiveProps: (newProps) ->
     @updateBoards newProps.subject if newProps.subject isnt @props.subject
 

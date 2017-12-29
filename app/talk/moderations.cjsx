@@ -2,7 +2,7 @@ React = require 'react'
 talkClient = require 'panoptes-client/lib/talk-client'
 auth = require 'panoptes-client/lib/auth'
 Paginator = require './lib/paginator'
-Loading = require '../components/loading-indicator'
+`import Loading from '../components/loading-indicator'`;
 page_size = require('./config').moderationsPageSize
 updateQueryParams = require './lib/update-query-params'
 ModerationComment = require './moderation/comment'

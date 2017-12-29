@@ -2,7 +2,7 @@ React = require 'react'
 talkClient = require 'panoptes-client/lib/talk-client'
 Paginator = require './lib/paginator'
 resourceCount = require './lib/resource-count'
-Loading = require '../components/loading-indicator'
+`import Loading from '../components/loading-indicator'`;
 ActiveUsers = require './active-users'
 ProjectLinker = require './lib/project-linker'
 `import TalkSearchResult from './search-result'`;

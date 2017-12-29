@@ -2,7 +2,7 @@ React = require 'react'
 {Markdown} = require 'markdownz'
 {Link} = require 'react-router'
 moment = require 'moment'
-Loading = require '../../components/loading-indicator'
+`import Loading from '../../components/loading-indicator'`;
 Avatar = require '../../partials/avatar'
 
 module.exports = React.createClass

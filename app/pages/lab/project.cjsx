@@ -1,7 +1,7 @@
 React = require 'react'
 {Link, IndexLink} = require 'react-router'
 PromiseRenderer = require '../../components/promise-renderer'
-LoadingIndicator = require '../../components/loading-indicator'
+`import LoadingIndicator from '../../components/loading-indicator'`;
 { Helmet } = require 'react-helmet'
 apiClient = require 'panoptes-client/lib/api-client'
 counterpart = require 'counterpart'

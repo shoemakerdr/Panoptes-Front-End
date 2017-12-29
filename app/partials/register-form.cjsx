@@ -3,7 +3,7 @@ React = require 'react'
 PromiseToSetState = require '../lib/promise-to-set-state'
 auth = require 'panoptes-client/lib/auth'
 Translate = require 'react-translate-component'
-LoadingIndicator = require '../components/loading-indicator'
+`import LoadingIndicator from '../components/loading-indicator'`;
 debounce = require 'debounce'
 
 REMOTE_CHECK_DELAY = 1000

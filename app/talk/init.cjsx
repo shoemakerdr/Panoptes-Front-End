@@ -9,7 +9,7 @@ ProjectLinker = require './lib/project-linker'
 {Link} = require 'react-router'
 CreateSubjectDefaultButton = require './lib/create-subject-default-button'
 CreateBoardForm = require './lib/create-board-form'
-Loading = require '../components/loading-indicator'
+`import Loading from '../components/loading-indicator'`;
 SingleSubmitButton = require '../components/single-submit-button'
 ZooniverseTeam = require './lib/zoo-team.cjsx'
 alert = require('../lib/alert').default
@@ -67,7 +67,7 @@ module.exports = React.createClass
           .get
             id: author_ids
           .then (users) =>
-            users.map (user) => 
+            users.map (user) =>
               @setState (prevState, props) ->
                 prevState.authors[user.id] = user
 

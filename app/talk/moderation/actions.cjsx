@@ -2,7 +2,7 @@ React = require 'react'
 {Link} = require 'react-router'
 moment = require 'moment'
 apiClient = require 'panoptes-client/lib/api-client'
-Loading = require '../../components/loading-indicator'
+`import Loading from '../../components/loading-indicator'`;
 
 actionTaken =
   destroy: 'Deleted'

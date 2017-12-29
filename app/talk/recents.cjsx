@@ -5,7 +5,7 @@ apiClient = require 'panoptes-client/lib/api-client'
 talkClient = require 'panoptes-client/lib/talk-client'
 Paginator = require './lib/paginator'
 updateQueryParams = require './lib/update-query-params'
-Loading = require '../components/loading-indicator'
+`import Loading from '../components/loading-indicator'`;
 talkConfig = require './config'
 
 module.exports = React.createClass
@@ -62,7 +62,7 @@ module.exports = React.createClass
       boardTitle = comments[0].board_title if @props.params.board
       loading = false
       @setState {comments, boardTitle, meta, loading}
-      
+
       author_ids = []
       subject_ids = []
       authors = {}

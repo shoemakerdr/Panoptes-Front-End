@@ -1,5 +1,5 @@
 import React from 'react';
-import Loading from '../components/loading-indicator';
+`import Loading from '../components/loading-indicator'`;
 import CollectionCard from '../pages/collections/collection-card';
 import Paginator from '../talk/lib/paginator';
 

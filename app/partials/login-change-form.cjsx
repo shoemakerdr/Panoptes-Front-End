@@ -2,7 +2,7 @@ counterpart = require 'counterpart'
 React = require 'react'
 ReactDOM = require 'react-dom'
 Translate = require 'react-translate-component'
-LoadingIndicator = require '../components/loading-indicator'
+`import LoadingIndicator from '../components/loading-indicator'`;
 
 counterpart.registerTranslations 'en',
   loginChangeForm:
@@ -63,5 +63,3 @@ module.exports = React.createClass
         <Translate content="loginChangeForm.submit" />
       </button>
     </form>
-
-

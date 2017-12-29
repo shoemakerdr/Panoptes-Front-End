@@ -10,7 +10,7 @@ Paginator = require './lib/paginator'
 Moderation = require './lib/moderation'
 StickyDiscussionList = require './sticky-discussion-list'
 ROLES = require './lib/roles'
-Loading = require '../components/loading-indicator'
+`import Loading from '../components/loading-indicator'`;
 SingleSubmitButton = require '../components/single-submit-button'
 merge = require 'lodash/merge'
 talkConfig = require './config'
@@ -81,7 +81,7 @@ module.exports = React.createClass
           .get
             id: author_ids
           .then (users) =>
-            users.map (user) => 
+            users.map (user) =>
               @setState (prevState, props) ->
                 prevState.authors[user.id] = user
 
