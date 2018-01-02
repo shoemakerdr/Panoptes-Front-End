@@ -5,10 +5,10 @@ apiClient = require 'panoptes-client/lib/api-client'
 Paginator = require './lib/paginator'
 getSubjectLocation = require '../lib/get-subject-location'
 resourceCount = require './lib/resource-count'
-`import Loading from '../components/loading-indicator'`;
 ActiveUsers = require './active-users'
 ProjectLinker = require './lib/project-linker'
 
+`import Loading from '../components/loading-indicator';`
 `import PopularTags from './popular-tags';`
 `import Thumbnail from '../components/thumbnail';`
 

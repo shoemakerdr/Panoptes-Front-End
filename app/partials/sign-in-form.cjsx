@@ -3,7 +3,7 @@ React = require 'react'
 ReactDOM = require 'react-dom'
 Translate = require 'react-translate-component'
 auth = require 'panoptes-client/lib/auth'
-`import LoadingIndicator from '../components/loading-indicator'`;
+LoadingIndicator = require('../components/loading-indicator').default
 
 counterpart.registerTranslations 'en',
   signInForm:
@@ -61,8 +61,8 @@ module.exports = React.createClass
             </a>
           </div>
 
-        else if @state.busy
-          <LoadingIndicator />
+        # else if @state.busy
+        #   <LoadingIndicator />
 
         else
           <a href="#{window.location.origin}/reset-password" onClick={@props.onSuccess}>

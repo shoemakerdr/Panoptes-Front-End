@@ -1,7 +1,7 @@
 React = require 'react'
 ReactDOM = require 'react-dom'
 talkClient = require 'panoptes-client/lib/talk-client'
-`import Loading from '../components/loading-indicator'`;
+Loading = require('../components/loading-indicator').default
 getCaretPosition = require './lib/get-caret-position'
 
 module.exports = React.createClass

@@ -2,10 +2,10 @@ React = require 'react'
 talkClient = require 'panoptes-client/lib/talk-client'
 Paginator = require './lib/paginator'
 resourceCount = require './lib/resource-count'
-`import Loading from '../components/loading-indicator'`;
+`import Loading from '../components/loading-indicator';`
 ActiveUsers = require './active-users'
 ProjectLinker = require './lib/project-linker'
-`import TalkSearchResult from './search-result'`;
+`import TalkSearchResult from './search-result';`
 `import PopularTags from './popular-tags';`
 
 TALK_SEARCH_ERROR_MESSAGE = 'There was an error with your search. Please try again.'

@@ -1,7 +1,7 @@
 React = require 'react'
 {Link} = require 'react-router'
 apiClient = require 'panoptes-client/lib/api-client'
-`import Loading from '../../components/loading-indicator'`;
+`import Loading from '../../components/loading-indicator';`
 
 module.exports = React.createClass
   displayName: 'ModerationActions'

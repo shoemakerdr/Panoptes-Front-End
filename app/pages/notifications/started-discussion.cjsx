@@ -1,6 +1,6 @@
 React = require 'react'
 {Link} = require 'react-router'
-`import Loading from '../../components/loading-indicator'`;
+LoadingIndicator = require('../../components/loading-indicator').default
 Comment = require './comment'
 
 module.exports = React.createClass

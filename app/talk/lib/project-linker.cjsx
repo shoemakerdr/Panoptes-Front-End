@@ -1,7 +1,7 @@
 React = require 'react'
 talkClient = require 'panoptes-client/lib/talk-client'
 {Link} = require 'react-router'
-`import Loading from '../../components/loading-indicator'`;
+`import Loading from '../../components/loading-indicator';`
 
 module.exports = React.createClass
   displayName: 'ProjectLinker'
